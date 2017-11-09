@@ -1,0 +1,5 @@
+[
+{"id":"0", "name":"A", "image":"A.jpg", "power":"333", "speed":"333"},
+{"id":"1", "name":"B", "image":"B.jpg", "power":"222", "speed":"222"},
+{"id":"2", "name":"C", "image":"C.jpg", "power":"111", "speed":"111"}
+]

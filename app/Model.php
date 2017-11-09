@@ -43,12 +43,23 @@ class Model{
 	}
 
 
-	public function save($id){
-		echo 'напишите реализацию метода'; die();
+	public function save($id, $item){
+		$data=file_get_contents($this->dataFileName);		
+		$data=json_decode($data);		
+		if(array_key_exists($id, $data)){
+			$data[$id] = $item;
+		}		
+		return file_put_contents($this->dataFileName, json_encode($data));
+		
 	}
 
 
 	public function delete($id){
-		echo 'напишите реализацию метода'; die();	
+		$data=file_get_contents($this->dataFileName);		
+		$data=json_decode($data);		
+		if(array_key_exists($id, $data)){
+			unset($data[$id]);
+		}		
+		return file_put_contents($this->dataFileName, json_encode($data));
 	}
 }
